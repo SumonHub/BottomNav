@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
+import com.app.bottomnav.MainActivity
 import com.app.bottomnav.R
 import com.app.bottomnav.databinding.FragmentHomeBinding
 
@@ -40,8 +41,7 @@ class HomeFragment : Fragment() {
 
         val textView: TextView = view.findViewById(R.id.text_home)
         textView.setOnClickListener {
-            findNavController().navigate(R.id.navigation_dashboard, null,
-            NavOptions.Builder().setPopUpTo(findNavController().graph.findStartDestination().id, inclusive = false).build())
+            (activity as? MainActivity)?.navigateToNavBarDestination(R.id.navigation_dashboard)
         }
     }
 
