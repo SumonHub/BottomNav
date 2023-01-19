@@ -31,6 +31,8 @@ class MainActivity : AppCompatActivity() {
         navController = findNavController(R.id.nav_host_fragment_activity_main)
 
         navView.setupWithNavController(navController!!)
+
+        // added more code
     }
 
     fun navigateToNavBarDestination(destinationId: Int) {
